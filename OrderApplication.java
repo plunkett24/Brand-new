@@ -10,19 +10,19 @@ public class OrderApplication {
 	private ProductCatalogue Catalogue;
 
 	public OrderApplication() {
-		System.out.println("OrderApplication info");
+		//System.out.println("called OrderApplication class");
 	}
-	
+
 	public boolean createOrder(Order oRef) {
-		
+
 		boolean success = this.importCatalogue();
-		System.out.println("OrderApplication info");
-		
+		//System.out.println("called OrderApplication class");
+
 		if (success) {
 			Iterator<Product> iterator = Catalogue.iterator();
 			while (iterator.hasNext()) {
 				Product product = iterator.next();
-				oRef.addOrderItem(product, 1);
+				oRef.addOrderItem(product, product.getQuantity());
 			}
 		}
 
@@ -35,14 +35,14 @@ public class OrderApplication {
 		Scanner in = null;
 
 		try {
-			in = new Scanner(Paths.get("C:\\Users\\Jamie Plunkett\\Desktop\\order-master\\src\\order\\foods.csv"));
-		//	C:\Users\Jamie Plunkett\Desktop\order-master\src\order
+			in = new Scanner(Paths.get("foods.csv"));
+
 			in.nextLine();
 
 			while (in.hasNextLine()) {
 				String[] ProductData = in.nextLine().split(",");
 				Catalogue.addProduct(ProductData[0], Double.parseDouble(ProductData[1]),
-						Integer.parseInt(ProductData[2]));
+						Integer.parseInt(ProductData[2]), Integer.parseInt(ProductData[3]));
 			}
 
 			in.close();

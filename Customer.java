@@ -10,6 +10,7 @@ public class Customer {
 	
 	public Customer(String name_, String address_, float creditRating_, float discountRating_)
 	{
+		System.out.println("Made change for Assignment5");
 		System.out.println("customer class info");
 		this.name = name_;
 		this.address = address_;

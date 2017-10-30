@@ -1,11 +1,11 @@
-Food,price,product_id
-rice,9.11,1
-Chicken,6.5,2
-Ice cream,8.8,3
-Roti,4.5,4
-Vegi,9.98,5
-Patties,2.55,6
-Milk,9.88,7
-Yam,6.55,8
-Beef,9.57,9
-Pizza,5.22,10
+Food,price,product_id,Quantity
+rice,9.11,1,25
+Chicken,6.5,2,65
+Ice cream,8.8,3,65
+Roti,4.5,4,52
+Vegi,9.98,5,45
+Patties,2.55,6,75
+Milk,9.88,7,85
+Yam,6.55,8,95
+Beef,9.57,9,32
+Pizza,5.22,10,75
